@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Text Spotlight</title>
+</head>
+<body>
+  <!-- 
+    效果：鼠标悬停在文字上，附近的文字颜色发生变化，且鼠标在X轴方向的位置不同，颜色也不同
+    原理：在h1元素上设置mousemove监听器，鼠标在h1上移动时，生成一个伪元素，使其文字内容与h1一样，
+          并获取鼠标所在位置，以该位置为圆心对生成的伪元素使用clip-path进行裁剪，
+          并通过filter: hue-rotate()设置颜色
+   -->
+
+  <div class="container">
+    <h1>CODE THE FUTURE YOU DREAM OF</h1>
+  </div>
+
+  <script src="./index.js" />
+</body>
+</html>

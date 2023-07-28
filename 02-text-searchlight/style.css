@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #222;
+}
+
+h1 {
+  position: relative;
+  color: #333;
+  font-size: 48px;
+}
+
+h1::after {
+  content: 'CODE THE FUTURE YOU DREAME OF';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: orange;
+  font-size: 48px;
+  clip-path: ellipse( 60px 40px at 0% 50% );
+  animation: move 6s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    clip-path: ellipse( 60px 40px at 0% 50% );
+    filter: hue-rotate( 0deg )
+  }
+  50% {
+    clip-path: ellipse( 60px 40px at 100% 50% );
+    filter: hue-rotate( 900deg )
+  }
+  100% {
+    clip-path: ellipse( 60px 40px at 0% 50% );
+    filter: hue-rotate( 0deg )
+  }
+}
